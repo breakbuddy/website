@@ -8,6 +8,11 @@ const server = http.createServer((req, res) =>
     res.end('Hello World,ZEET');
 });
 
+server.get('/hursit', (req, res) => {
+    res.statusCode = 200;
+    res.end("Hello Hursit!");
+});
+
 server.listen(port, hostname, () => {
     console.log(
         "Server running at")
