@@ -20,6 +20,11 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 });
 
+app.get('/hursit', (req, res) => {
+    res.send('Hello Hursit!')
+});
+
+
 const gameRouter = require('./routes/game');
 app.use('/game', gameRouter);
 
