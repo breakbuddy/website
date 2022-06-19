@@ -1,4 +1,5 @@
 const gameService = require("../services/gameService");
+const path = require("path");
 
 function setCountryFlag(country) {
     let name = country.toLowerCase();
@@ -28,7 +29,8 @@ module.exports.country = async function(req, res, next) {
         let country = req.params.country;
         let image = setCountryFlag(country);
 
-        res.sendFile(image, { root: 'zeettest\/public\/flags' });
+        //res.sendFile(image, { root: 'public\\flags' });
+        res.sendFile(path.join(__dirname, '../public/flags', image));
     }
     catch (err) {
         next(err);
