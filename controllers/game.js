@@ -28,7 +28,7 @@ module.exports.country = async function(req, res, next) {
         let country = req.params.country;
         let image = setCountryFlag(country);
 
-        res.sendFile(image, { root: 'public\\flags' });
+        res.sendFile(image, { root: '\/public\/flags' });
     }
     catch (err) {
         next(err);
