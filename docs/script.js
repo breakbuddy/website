@@ -123,7 +123,7 @@ function adviceLocation() {
     let answer4 = localStorage.getItem("answer_4");
     let answer5 = localStorage.getItem("answer_5");
 
-    fetch('http://localhost:3000/game/', {
+    fetch('https://breakbuddy.herokuapp.com/game/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ function adviceLocation() {
 }
 
 function setCountryFlag(country) {
-    let url = 'http://localhost:3000/game/' + country;
+    let url = 'https://breakbuddy.herokuapp.com/game/' + country;
 
     fetch( url, {
         method: 'GET',
