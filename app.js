@@ -28,6 +28,6 @@ app.get('/hursit', (req, res) => {
 const gameRouter = require('./routes/game');
 app.use('/game', gameRouter);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
